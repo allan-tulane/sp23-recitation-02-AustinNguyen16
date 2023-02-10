@@ -1,6 +1,6 @@
 # CMPS 2200  Recitation 02
 
-**Name (Team Member 1):**_________________________  
+**Name (Team Member 1):**Austin Nguyen 
 **Name (Team Member 2):**_________________________
 
 In this recitation, we will investigate recurrences. 
@@ -48,12 +48,12 @@ where $W(1) = 1$.
 
 - [ ] 4. (2 point) Now, derive the asymptotic behavior of $W(n)$ using $f(n) = 1$, $f(n) = \log n$ and $f(n) = n$. Then, generate actual values for $W(n)$ for your code and confirm that the trends match your derivations.
 
-**TODO: your answer goes here**
+**As n goes to infinity, it shows as a^kW(n/b^k) + (1 - a^k)/(1-a) (for f(n) = 1), and holds true for the rest of the functions.**
 
 - [ ] 5. (4 points) Now that you have a nice way to empirically generate valuess of $W(n)$, we can look at the relationship between $a$, $b$, and $f(n)$. Suppose that $f(n) = n^c$. What is the asypmptotic behavior of $W(n)$ if $c < \log_b a$? What about $c > \log_b a$? And if they are equal? Modify `compare_work` to compare empirical values for different work functions (at several different values of $n$) to justify your answer. 
 
-**TODO: your answer goes here**
+**If c < \log_b a, then it will converge to a smaller number, while c > \log_b a will converge to a bigger number because a makes the recurrance grow by a factor of a while as b increases it reduced by logb. If they are equal, then it will not affect the function.**
 
 - [ ] 6. (3 points) $W(n)$ is meant to represent the running time of some recursive algorithm. Suppose we always had $a$ processors available to us and we wanted to compute the span of the same algorithm. Implement the function `span_calc` to compute the empirical span, where the work of the algorithm is given by $W(n)$. Implement `test_compare_span` to create a new comparison function for comparing span functions. Derive the asymptotic expressions for the span of the recurrences you used in problem 4 above. Confirm that everything matches up as it should. 
 
-**TODO: your answer goes here**
+**Everything Matches**
