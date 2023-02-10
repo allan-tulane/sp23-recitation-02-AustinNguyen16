@@ -45,9 +45,9 @@ def compare_work(work_fn1, work_fn2, sizes = [10, 20, 50, 10, 100, 5000, 10000])
   
 def span_calc(n,a,b,f):
   if n == 1:
-        return n
-    else:
-        return a * span_calc(n//b, a, b, f) + f(n)
+        return 1
+  result = a * span_calc(int(n/b), a, b, f) + f(n)
+  return result
 
 def print_results(results):
 	""" done """
@@ -61,8 +61,8 @@ def test_compare_work():
   work_fn2(1)=1
   work_fn1 = (lambda n:2) * work_fn1(n//2) + work_fn1(n)
   work_fn2 = (lambda n:2) * work_fn2(n//2) + work_fn2(n*n)
-  res=comapre_work(work_fn1,work_fn2)
-  print_work_results(res)
+  result=comapre_work(work_fn1,work_fn2)
+  print_work_results(result)
 
 def test_compare_span():
   result=[]
